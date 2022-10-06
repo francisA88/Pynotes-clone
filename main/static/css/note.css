@@ -1,0 +1,44 @@
+/**/
+.note-container{
+  width: 100vw;
+}
+form{
+  width: 100%;
+  box-shadow: 0 4px 4px #CCC;
+}
+form .textarea{
+  width: 95%;
+  padding: 10px;
+}
+header h5{
+  padding-left: 15px;
+  color: teal;
+  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+}
+.buttons{
+  width: 100%;
+  max-width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 60px;
+}
+#details{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+  flex-direction: column;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: underline;
+  text-decoration-color: teal;
+}
+#details li:nth-child(1){
+  font-size: 1.35rem;
+}
+#details li{
+  font-size: 1.1em;
+}

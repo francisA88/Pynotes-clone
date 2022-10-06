@@ -1,0 +1,112 @@
+@import url('/static/css/autosuggestion.css');
+
+header{
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+.suggestions-field{
+  flex: .95;
+}
+header > button{
+  width: 50px;
+}
+
+.hide{
+  display: none;
+}
+main{
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > div{
+  text-align: center;
+  width: 95%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.note-add-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+.pwd-input{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 100%;
+  max-width: 100%;
+  margin-top: 5px;
+}
+
+.pwd-input > span{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.pwd-input > div{
+  display: inline-flex;
+  width: 100%;
+  min-width: 100%;
+  justify-content: space-between;
+}
+.pwd-input > div input{
+  flex: .96;
+}
+
+.buttons{
+  margin-top: 10px;
+  display: flex;
+}
+#addbtn:active{
+  transform: rotate(180deg);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-sugg{
+  position: absolute;
+  background: white;
+  box-shadow: 2px 0px 2px 5px 4px #CCCC;
+  border: 0;
+}
+.search-sugg > ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.search-sugg li{
+  font-size: .95rem;
+  padding-left: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px
+  height: 30px;
+  min-height: 30px;
+}
+#results-list{
+  width: 100%;
+}
+#results-content{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+#results-list li{
+  min-height: 40px;
+  padding-left: 10px;
+}
+/*datalist{
+  max-height: 80px;
+}*/

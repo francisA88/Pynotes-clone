@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {%load static%}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <link rel="stylesheet" href="{%static 'iconfont/material-icons.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{%static 'css/bulma.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{%static 'css/general.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{%static 'css/note.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{%static 'css/notification.css' %}" type="text/css" media="all" />
+    <title>{{title_short}}...</title>
+  </head>
+  <body>
+    <header>
+      <h5 class="tangerine" style="font-weight:bolder;padding-left:10px">{{title}}</h5>
+    </header>
+    <br/>
+    <div class='notification is-success'>
+      <button class="delete"></button>
+      Every note created can be viewed by a temporary link which only allows you to load a note's page twice.
+    </div>
+    <div class="note-container">
+      <form action='/notes/create'>
+        <textarea class="textarea is-small is-primary" rows="10" readonly>{{content}}</textarea>
+        <br/>
+        <div class="buttons">
+          <button class="button is-primary is-small" type="submit"><i class="material-icons white">add</i>Create</button>
+        </div>
+      </form>
+    </div>
+    <ul id='details'>
+      <li class='tangerine'>Details</li>
+      <li class='tangerine'>Date created: {{date}}</li>
+      <li class='tangerine'>Time: {{time}} (24 hour format)</li>
+    </ul>
+    <script>
+      const successNotification = document.querySelector('.notification');
+
+      document.querySelectorAll(".delete").forEach(elem=>{
+      	elem.addEventListener('click', function(e){
+      		elem.parentElement.style.display = 'none';
+      	})
+      })
+    </script>
+  </body>
+</html>
